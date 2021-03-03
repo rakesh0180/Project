@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Counter</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #count {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 id="count">0</h1>
+        <button id="upBtn">up</button>
+        <button id="restBtn">rest</button>
+    </center>
+    <script>
+        const count = document.getElementById("count")
+        const upBtn = document.getElementById("upBtn")
+        const restBtn = document.getElementById("restBtn")
+        upBtn.addEventListener("click", function() {
+            /*    console.log(count.innerHTML); //print innerHtml value first time 0 then 1,2
+               console.log(typeof(count.innerHTML)); //string
+               console.log(parseInt(count.innerHTML) + 1);1,2,3,4,5 */
+            count.innerHTML = parseInt(count.innerHTML) + 1
+        })
+        restBtn.addEventListener("click", function() {
+            count.innerHTML = 0
+        })
+    </script>
+</body>
+
+</html>
