@@ -50,12 +50,18 @@
                console.log(typeof(count.innerHTML)); //string
                console.log(parseInt(count.innerHTML) + 1);1,2,3,4,5 */
             count.innerHTML = parseInt(count.innerHTML) + 1
+
         })
+        downBtn.onclick = function() {
+
+        }
         downBtn.addEventListener('click', function() {
             if (count.innerHTML >= 1) {
                 count.innerHTML = (parseInt(count.innerHTML) - 1)
             } else {
-                error.innerHTML = "you cannot minus, it will go negative value"
+                // error.innerHTML = "stop clicking down button, the value is 0"
+
+                alert("stop clicking down button, the value is 0")
             }
         })
         restBtn.addEventListener("click", function() {
