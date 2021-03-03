@@ -3,12 +3,26 @@
 
 <head>
     <style>
-
+        p {
+            font-size: 25px;
+            color: blue
+        }
     </style>
 </head>
 
 <body>
-
+    <p id='par1'>Hi, tell me about you</p>
 </body>
+<script>
+    //As best practices script tag must be in head
+    //document.getElementById is Dom object
+    //addEventListener is property
+    //innerHTML is property
+    const para1 = document.getElementById('par1')
+    para1.addEventListener('click', function() {
+        para1.innerHTML = '<P> Hi, My Name is <strong>Rakesh M</strong>, I am from\
+        Hesaraghatta Bangalore, I completed my Post Graduation in MCA at Achaōrya Institute of Technology'
+    })
+</script>
 
 </html>
