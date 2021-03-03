@@ -16,11 +16,16 @@
             border-bottom-width: thick;
             border-radius: 20%;
             right: 30px;
-            display: inline-block;
+            /* display: inline-block; */
         }
         
         div {
             text-align: center;
+        }
+        
+        #error {
+            color: red;
+            font-size: 30px;
         }
     </style>
 </head>
@@ -32,6 +37,7 @@
         <button id="upBtn">up</button>
         <button id="downBtn">down</button>
         <button id="restBtn">rest</button>
+        <div id="error"></div>
 
     </div>
     <script>
@@ -49,7 +55,7 @@
             if (count.innerHTML >= 1) {
                 count.innerHTML = (parseInt(count.innerHTML) - 1)
             } else {
-                alert("we can't minus")
+                error.innerHTML = "we cannot minus, it will go negative value"
             }
         })
         restBtn.addEventListener("click", function() {
