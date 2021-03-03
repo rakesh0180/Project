@@ -7,25 +7,50 @@
     <style>
         #count {
             color: orange;
+            font-size: 100px;
+        }
+        
+        button {
+            font-size: 30px;
+            border-bottom-color: red;
+            border-bottom-width: thick;
+            border-radius: 20%;
+            right: 30px;
+            display: inline-block;
+        }
+        
+        div {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <center>
+    <div>
         <h1 id="count">0</h1>
+
         <button id="upBtn">up</button>
+        <button id="downBtn">down</button>
         <button id="restBtn">rest</button>
-    </center>
+
+    </div>
     <script>
         const count = document.getElementById("count")
         const upBtn = document.getElementById("upBtn")
         const restBtn = document.getElementById("restBtn")
+        const downBtn = document.getElementById("downBtn")
         upBtn.addEventListener("click", function() {
             /*    console.log(count.innerHTML); //print innerHtml value first time 0 then 1,2
                console.log(typeof(count.innerHTML)); //string
                console.log(parseInt(count.innerHTML) + 1);1,2,3,4,5 */
             count.innerHTML = parseInt(count.innerHTML) + 1
+        })
+        downBtn.addEventListener('click', function() {
+            if (count.innerHTML >= 1) {
+                count.innerHTML = (parseInt(count.innerHTML) - 1)
+            } else {
+                alert("we can't minus")
+            }
         })
         restBtn.addEventListener("click", function() {
             count.innerHTML = 0
