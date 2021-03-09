@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>This is title page</title>
+    <style>
+        button {
+            width: 100px;
+            margin-left: 120px;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table border=".1">
+        <caption>product bill</caption>
+
+        <thead>
+            <tr align=center>
+                <th>No</th>
+                <th>Item names</th>
+                <th>Cost</th>
+                <th>Quantity <em>in kg</em></th>
+                <th>Total Cost</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr align=center id="tr1">
+                <td>1</td>
+                <td>Apple</td>
+                <td id="rs1">120</td>
+                <td id="qu1">2</td>
+                <td id="td1"></td>
+
+            </tr>
+            <tr id="tr2" align=center>
+                <td>2</td>
+                <td>Mango</td>
+                <td id="rs2">80</td>
+                <td id="qu2">5</td>
+                <td id="td2"></td>
+
+            </tr>
+            <tr id="tr3" align=center>
+                <td>3</td>
+                <td>kiwi</td>
+                <td id="rs3">70</td>
+                <td id="qu3">1</td>
+                <td id="td3"></td>
+
+            </tr>
+            <tr id="tr4" align=center>
+                <td>4</td>
+                <td>Dragon Fruit</td>
+                <td id="rs4">300</td>
+                <td id="qu4">4</td>
+                <td id="td4"></td>
+
+            </tr>
+            <tr id="tr5" align=center>
+                <td>5</td>
+                <td>Orange</td>
+                <td id="rs5">40</td>
+                <td id="qu5">8</td>
+                <td id="td5"></td>
+
+            </tr>
+            <tr id="tr6" align=center>
+                <td>6</td>
+                <td>Butter Fruit</td>
+                <td id="rs6">350</td>
+                <td id="qu6">5</td>
+                <td id="td6"></td>
+            </tr>
+            <tr id="tr7" align=centers>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="totalQuantity">
+                </td>
+                <td id="td7"></td>
+            </tr>
+        </tbody>
+    </table><br>
+    <button type="submit">Total</button>
+    <script>
+        const item1 = document.getElementById("rs1")
+        const item2 = document.getElementById("rs2")
+        const item3 = document.getElementById("rs3")
+        const item4 = document.getElementById("rs4")
+        const item5 = document.getElementById("rs5")
+        const item6 = document.getElementById("rs6")
+        const qua1 = document.getElementById("qu1")
+        const qua2 = document.getElementById("qu2")
+        const qua3 = document.getElementById("qu3")
+        const qua4 = document.getElementById("qu4")
+        const qua5 = document.getElementById("qu5")
+        const qua6 = document.getElementById("qu6")
+            // const totalQuantity = document.getElementById("totalQuantity")
+        const submit = document.getElementById('submit')
+        submit.addEventListener("click", function() {
+
+
+            const cost1 = Number.parseInt(item1) * Number.parseInt(quq1);
+            const cost2 = Number.parseInt(item2) * Number.parseInt(quq2);
+            const cost3 = Number.parseInt(item3) * Number.parseInt(quq3);
+            const cost4 = Number.parseInt(item4) * Number.parseInt(quq4);
+            const cost5 = Number.parseInt(item5) * Number.parseInt(quq5);
+            const cost6 = Number.parseInt(item6) * Number.parseInt(quq6);
+            let total = cost1 + cost2 + cost3 + cost4 + cost5 + cost6;
+            let totalQuantity = Number(qua1) + Number(qua2) + Number(qua3) + Number(qua4) + Number(qua5) + Number(qua6)
+            console.log(total);
+            td1.innerHTML = cost1
+            td2.innerHTML = cost2
+            td3.innerHTML = cost3
+            td4.innerHTML = cost4
+            td5.innerHTML = cost5
+            td6.innerHTML = cost6
+            td7.innerHTML = total
+            qua7.innerHTML = totalQuantity
+
+        })
+    </script>
+
+
+</body>
+
+</html>
