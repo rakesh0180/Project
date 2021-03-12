@@ -76,11 +76,7 @@
                 <td id="td6"></td>
             </tr>
             <tr id="tr7" align=centers>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td id="totalQuantity"></td>
-                <td id="total"></td>
+
             </tr>
         </tbody>
     </table><br>
@@ -103,12 +99,6 @@
             const quantity5 = parseInt(document.getElementById("qu5").innerHTML)
             const quantity6 = parseInt(document.getElementById("qu6").innerHTML)
 
-            const totalQuantity = document.getElementById("totalQuantity")
-            totalQuantity.innerHTML = `Number of items = ${quantity1 + quantity2 + quantity3 + quantity4 + quantity5 + quantity6}`
-            totalQuantity.style.textAlign = "center" // center text
-            totalQuantity.style.color = 'red' //color
-            totalQuantity.style.fontWeight = "900" //bold
-
             const td1 = document.getElementById("td1")
             const td2 = document.getElementById("td2")
             const td3 = document.getElementById("td3")
@@ -129,13 +119,41 @@
             td4.innerHTML = `${itemTotal4}`
             td5.innerHTML = `${itemTotal5}`
             td6.innerHTML = `${itemTotal6}`
+                /*   const totalQuantity = document.getElementById("totalQuantity")
+                const totalQuantityItems = quantity1 + quantity2 + quantity3 + quantity4 + quantity5 + quantity6
+                  totalQuantity.innerHTML = `Number of items = ${totalQuantityItems}`
+                  totalQuantity.style.textAlign = "center" // center text
+                  totalQuantity.style.color = 'red' //color
+                  totalQuantity.style.fontWeight = "900" //bold */
 
-            const total = document.getElementById("total")
-            const totalAmount = itemTotal1 + itemTotal2 + itemTotal3 + itemTotal4 + itemTotal5 + itemTotal6
-            total.innerHTML = `Total cost = ${totalAmount}`
-            total.style.textAlign = "center" // center text
-            total.style.color = 'red' //text color
-            total.style.fontWeight = "900" // text bold
+            /*  const total = document.getElementById("total")
+             const totalAmount = itemTotal1 + itemTotal2 + itemTotal3 + itemTotal4 + itemTotal5 + itemTotal6
+             total.innerHTML = `Total cost = ${totalAmount}`
+             total.style.textAlign = "center" // center text
+             total.style.color = 'red' //text color
+             total.style.fontWeight = "900" // text bold
+              <td></td>
+                 <td></td>
+                 <td></td>
+                 <td id="totalQuantity"></td>
+                 <td id="total"></td>*/
+
+            const total = document.getElementById("tr7")
+            const totalQuantityItems = quantity1 + quantity2 + quantity3 + quantity4 + quantity5 + quantity6;
+            const totalAmount = itemTotal1 + itemTotal2 + itemTotal3 + itemTotal4 + itemTotal5 + itemTotal6;
+            total.innerHTML = `<td></td>
+                 <td></td>
+                 <td></td>
+                 <td  id ='tQua'>Number of items = ${totalQuantityItems}</td>
+                 <td id="tot">Total cost = ${totalAmount}</td>`
+            const tQua = document.getElementById("tQua").style.color = "red"
+            const tot = document.getElementById("tot").style.color = "red"
+            tQua.style.textAlign = "center"; // center text
+            tQua.style.color = 'red' //color
+            tQua.style.fontWeight = "900" //bold
+            tot.style.textAlign = "center" // center text
+            tot.style.color = 'red' //text color
+            tot.style.fontWeight = "900" // text bold
 
         }
         submit.addEventListener('click', function() {
